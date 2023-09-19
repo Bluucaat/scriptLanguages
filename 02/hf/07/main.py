@@ -1,8 +1,11 @@
-def main():
-    a = input("Adja meg az elso szamot: ")
-    b = input("Adja meg a masodik szamot: ")
+import sys
 
-    if a.isdigit() and b.isdigit():
+
+def main():
+    a = sys.argv[1]
+    b = sys.argv[2]
+
+    if a.lstrip("-").isdigit() and b.lstrip("-").isdigit():
         a = int(a)
         b = int(b)
         print(a + b)
