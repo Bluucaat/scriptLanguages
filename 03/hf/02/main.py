@@ -9,7 +9,7 @@ L3GY BU5ZK3! C54K K3V35 3MB3R K3P35 3L0LV45N1 3Z7.
 H4 7375Z377, 05ZD M3G M450KK4L 15!
 """.strip()
 DECODEDICT = {
-    0: "0",
+    0: "O",
     1: "I",
     3: "E",
     4: "A",
@@ -30,6 +30,7 @@ def dekodolas():
 
 
 def main():
+    print(TEXT)
     print(dekodolas())
 
 
