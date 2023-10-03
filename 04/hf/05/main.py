@@ -2,8 +2,7 @@ MELY_MGHK = ['a', 'á', 'o', 'ó', 'u', 'ú']
 MAGAS_MGHK = ['e', 'é', 'i', 'í', 'ö', 'ő', 'ü', 'ű']
 
 
-def findWordType(words):
-    for word in words:
+def findWordType(word):
         mely = False
         magas = False
 
@@ -13,18 +12,19 @@ def findWordType(words):
             if char in MAGAS_MGHK:
                 magas = True
         if mely and magas:
-            print("a " + word + " szo vegyes.")
+            return "vegyes"
         elif mely and not magas:
-            print("a " + word + " szo mely.")
+            return "mely"
         elif magas and not mely:
-            print("a " + word + " szo magas.")
+            return "magas"
         else:
-            print("a " + word + " szo semmilyen.")
+            return "semmilyen"
 
 
 def main():
     szavak = ["ablak", "erkély", "kisvasút", "magas", "mély", "pfff"]
-    findWordType(szavak)
+    for el in szavak:
+     print("a(z) " + el + " szo " + findWordType(el))
 
 
 if __name__ == '__main__':
